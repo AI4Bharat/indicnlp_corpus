@@ -62,18 +62,40 @@
 **Note**: We are working on releasing much larger dataset (version 2) soon.
 
 
+## Pre-requisites 
+
+To replicate the results reported in the paper, training and evaluation scripts are provided.
+To run these scripts, the following tools/packages are required: 
+
+- [FastText]()
+- [MUSE]()
 
 ## Word Embeddings
 
 (_Anoop, complete this section_)
 
-**Training script**
+** Training word embedding **
 
-**Word similarity dataset**
+```
+$FASTTEXT_HOME/build/fasttext skipgram \
+	-epoch 10 -thread 30 -ws 5 -neg 10    -minCount 5 -dim 300 \
+	-input $mono_path \
+	-output $output_emb_prefix 
+```
 
-TBD: (put) put link to cleaned IIIT-H dataset
+**Computing word similarity**
 
-**Evaluation Script**
+IIIT-H Word Similarity Database: `https://indicnlp.blob.core.windows.net/evaluations/word_similarity/iiith_wordsim.tgz`
+
+_Evaluation Command_
+
+```
+scripts/word_similarity/wordsim.sh \
+	<embedding_file_path> \
+	<word_sim_db_path> \
+	200000
+```
+
 
 **Word analogy dataset**
 TBD: (put) put link to Google analogy datasets
