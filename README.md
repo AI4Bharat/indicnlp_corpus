@@ -117,17 +117,14 @@ python  scripts/word_analogy/word_analogy.py \
     --cuda
 ```
 
-### Version 1.0
 **Download Links**
 
-- `https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.<langcode>.vec.gz`
+_Version 1_ 
 
-- `https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.<langcode>.bin.gz`
-
-
-language | pa | hi | bn | or | gu | mr | kn | te | ml | ta 
-vectors | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.pa.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.hi.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.bn.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.or.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.gu.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.mr.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.kn.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.te.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ml.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ta.vec.gz) |
-model | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.pa.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.hi.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.bn.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.or.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.gu.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.mr.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.kn.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.te.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ml.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ta.bin.gz) |
+| language | pa | hi | bn | or | gu | mr | kn | te | ml | ta |
+| -------- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| vectors | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.pa.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.hi.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.bn.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.or.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.gu.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.mr.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.kn.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.te.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ml.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ta.vec.gz) |
+| model | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.pa.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.hi.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.bn.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.or.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.gu.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.mr.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.kn.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.te.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ml.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ta.bin.gz) |
 
 
 
