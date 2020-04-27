@@ -74,7 +74,7 @@ To run these scripts, the following tools/packages are required:
 
 (_Anoop, complete this section_)
 
-** Training word embedding **
+**Training word embeddings**
 
 ```
 $FASTTEXT_HOME/build/fasttext skipgram \
@@ -83,25 +83,39 @@ $FASTTEXT_HOME/build/fasttext skipgram \
 	-output $output_emb_prefix 
 ```
 
-**Computing word similarity**
+**Evaluation on word similarity task**
 
 IIIT-H Word Similarity Database: `https://indicnlp.blob.core.windows.net/evaluations/word_similarity/iiith_wordsim.tgz`
 
+The above mentioned link is a cleaned version of the same database found [HERE](https://github.com/syedsarfarazakhtar/Word-Similarity-Datasets-for-Indian-Languages).
+
+
 _Evaluation Command_
 
+
 ```
-scripts/word_similarity/wordsim.sh \
+python scripts/word_similarity/wordsim.py \
 	<embedding_file_path> \
 	<word_sim_db_path> \
-	200000
+	<max_vocab>
 ```
 
 
-**Word analogy dataset**
-TBD: (put) put link to Google analogy datasets
+**Evaluation on word analogy task**
 
-**Evaluation Script**
+Evaluation on the [Facebook word analogy dataset](https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-hi.txt).
 
+_Evaluation Command_
+
+
+```
+python  scripts/word_analogy/word_analogy.py \
+    --analogy_fname <analogy_fname> \
+    --embeddings_path <embedding_file_path> \
+    --lang 'hi' \
+    --emb_dim 300 \
+    --cuda
+```
 
 ### Version 1.0
 **Download Links**
@@ -109,6 +123,19 @@ TBD: (put) put link to Google analogy datasets
 - `https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.<langcode>.vec.gz`
 
 - `https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.<langcode>.bin.gz`
+
+
+language | pa | hi | bn | or | gu | mr | kn | te | ml | ta 
+vectors | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.pa.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.hi.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.bn.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.or.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.gu.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.mr.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.kn.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.te.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ml.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ta.vec.gz) |
+model | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.pa.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.hi.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.bn.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.or.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.gu.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.mr.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.kn.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.te.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ml.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ta.bin.gz) |
+
+
+
+
+
+
+
+
 
 
 
