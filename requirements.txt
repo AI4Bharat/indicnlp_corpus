@@ -9,3 +9,4 @@ gensim==3.8.2
 faiss==1.5.3
 scikit_learn==0.22.2.post1
 indic-nlp-library
+morfessor
