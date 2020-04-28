@@ -38,7 +38,7 @@
 
 
 
-## Text Corpus
+## Text Corpora
 
 (_Divyanshu, complete this section_)
 
@@ -158,7 +158,7 @@ morfessor-train -d ones \
 
 **Version 1.0**
 
-We used the IndicNLP text corpora to create classification datasets comprising news articles and their categories for 9 languages. The dataset is balanced across classes and can be downloaded from [here]().  The following table contains the statistics of our dataset:
+We used the IndicNLP text corpora to create classification datasets comprising news articles and their categories for 9 languages. The dataset is balanced across classes.  The following table contains the statistics of our dataset:
 
 | Language  | Classes                                     | Articles per Class |
 | --------- | ------------------------------------------- | ------------------ |
@@ -172,7 +172,7 @@ We used the IndicNLP text corpora to create classification datasets comprising n
 | Tamil     | entertainment, politics, sport              | 3.9K               |
 | Telugu    | entertainment, business, sports             | 8K                 |
 
-To evaluate your embeddings on any of the above dataset, first download the dataset and then run the following command:
+The dataset can be downloaded from [here](). To evaluate your embeddings, first download the dataset and then run the following command:
 
 ```bash
 python3 scripts/txtcls.py --emb_path <path> --data_dir <path> --lang <lang code>
