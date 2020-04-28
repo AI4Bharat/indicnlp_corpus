@@ -86,7 +86,7 @@ _Version 1_
 
 **Training word embeddings**
 
-```
+```bash
 $FASTTEXT_HOME/build/fasttext skipgram \
 	-epoch 10 -thread 30 -ws 5 -neg 10    -minCount 5 -dim 300 \
 	-input $mono_path \
@@ -103,7 +103,7 @@ The above mentioned link is a cleaned version of the same database found [HERE](
 _Evaluation Command_
 
 
-```
+```bash
 python scripts/word_similarity/wordsim.py \
 	<embedding_file_path> \
 	<word_sim_db_path> \
@@ -116,7 +116,7 @@ Evaluate on the [Facebook word analogy dataset](https://dl.fbaipublicfiles.com/f
 
 _Evaluation Command_
 
-```
+```bash
 python  scripts/word_analogy/word_analogy.py \
     --analogy_fname <analogy_fname> \
     --embeddings_path <embedding_file_path> \
@@ -138,7 +138,7 @@ _Version 1_
 
 **Training Command**
 
-```
+```bash
 ## extract vocabulary from embedings file
 zcat $embedding_vectors_path |  \
     tail -n +2 | \
@@ -158,11 +158,23 @@ morfessor-train -d ones \
 
 **Version 1.0**
 
-- data format
 
-* raw article text
 
-- Evaluation scripts (TBD by Divyanshu):
+We use the IndicNLP text corpora to create classification datasets comprising news articles and their categories for 9 languages. The categories are determined from URL components. We chose generic categories like entertainment and sports which are likely to be consistent across websites. The datasets are balanced across classes.
+
+The dataset can be download [here](). To evaluate your embeddings on the above dataset, first download them and then run the following command:
+
+```bash
+python3 scripts/txtcls.py --emb_path <path> --data_dir <path> --lang <lang code>
+```
+
+
+
+- data format - described in the readme file
+
+* raw article text - meaning?
+
+- Evaluation scripts (TBD by Divyanshu): -- done
   - Please include the evaluation scripts in this repo
   - Ensure that the scripts are running
 
@@ -178,18 +190,35 @@ morfessor-train -d ones \
 
 (_Divyanshu, complete this section_)
 
-- Satish's original compilation is available here:
-  - `https://github.com/satti007/nltk`
+To further enhance our evaluation benchmarks, we compiled the following publicly-available evaluation datasets.
+
+* ACTSA Corpus: Sentiment analysis corpus for Telugu sentences. [download link]()
+* BBC News Articles: Sentiment analysis corpus for Hindi documents extracted from BBC news website. [dowload link]()
+* IIT Patna Product Reviews: Sentiment analysis corpus for product reviews posted in Hindi. [download link]()
+* INLTK Headlines Corpus: Obtained from [inltk](https://github.com/goru001/inltk) project. The corpus is a collection of headlines tagged with their news category. Available for langauges: gu, ml, mr, ta and te. [download link]()
+* IIT Patna Movie Reviews: Sentiment analysis corpus for movie reviews posted in Hindi. [download link]()
+* Bengali News Articles: Contains Bengali news articles tagged with their news category. [download link]()
+
+
+
+To evaluate your embeddings on any of the above dataset, first download them and then run the following command:
+
+```bash
+python3 scripts/txtcls.py --emb_path <path> --data_dir <path> --lang <lang code>
+```
+
+
+
 - Evaluation scripts (TBD by Divyanshu):
-  - Please include the evaluation scripts in this repo
-  - Ensure that the scripts are running
   - may need to rerun the evaluation for some languages since embeddings were updated
   - Anoop: check if Satish already trained with updated data
 - Data Download links:
-  - Divyanshu: Prepare the data set and share with anoop
+  - Divyanshu: Prepare the data set and share with anoop -- done
   - Anoop: Upload to the above dataset to the below locations
 - `https://indicnlp.blob.core.windows.net/data/classification/public-eval_datasets-v1.0.tgz`
 - License: available under original license
+
+
 
 ## Citing
 
