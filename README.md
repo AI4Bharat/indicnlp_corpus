@@ -1,4 +1,4 @@
-# <center>IndicNLP Corpora</center>
+# <center>AI4Bharat-IndicNLP Corpus</center>
 
 
 
