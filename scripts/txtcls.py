@@ -9,7 +9,6 @@ import requests
 import numpy as np
 
 from sklearn import preprocessing
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 from tqdm import tqdm
 from indicnlp.tokenize import indic_tokenize
@@ -32,7 +31,7 @@ def doc2vec(txt, lang, emb):
     if len(word_vecs) > 0:
         doc_vec = np.mean(np.array(word_vecs), axis=0)
     else:
-        doc_vec = np.zeros(300)
+        doc_vec = np.zeros(emb.vector_size)
     return doc_vec
 
 
@@ -40,7 +39,7 @@ class TxtCls:
 
     def __init__(self, *args, **kwargs):
         """
-        Downloads and loads the evaluation dataset in memory
+        Loads the evaluation dataset in memory
 
         The raw data is stored as an n x 2 array where the first columns
         holds the class label string and the second column holds the
@@ -48,12 +47,11 @@ class TxtCls:
         """
         self.data_dir = kwargs['data_dir']
         self.lang = kwargs['lang']
-        self.task_dir = os.path.join(self.data_dir, 'indicnlp-txtcls')
 
-        if not os.path.exists(self.task_dir):
-            self.download(self.data_dir)
+        if not os.path.exists(self.data_dir):
+            raise 'Please download the dataset first'
 
-        lang_dir = os.path.join(self.task_dir, self.lang)
+        lang_dir = os.path.join(self.data_dir, self.lang)
         train_fname = os.path.join(lang_dir, self.lang + '-train.csv')
         test_fname = os.path.join(lang_dir, self.lang + '-test.csv')
 
@@ -70,22 +68,16 @@ class TxtCls:
             data = list(reader)
         return data
 
-    def download(self, download_dir):
-        fp = tempfile.NamedTemporaryFile()
-        remote_url = 'https://storage.googleapis.com/nlp-corpora--ai4bharat/'\
-                     'indicnlp-datasets/evaluation/indicnlp-txtcls.tar.xz'
-        blob = requests.get(remote_url).content
-        fp.write(blob)
-        tar = tarfile.open(fp.name)
-        tar.extractall(path=download_dir)
-        tar.close()
-
     def evaluate(self, emb):
+        print('Computing document vectors for train set...')
         self.train = self.process_dataset(self.raw_train, emb)
+        
+        print('Computing document vectors for test set...')
         self.test = self.process_dataset(self.raw_test, emb)
 
-        k = 5
+        k = 4
         dim = 300
+        print('Running KNN with k={}..'.format(k))
         database = self.train[:, 1:].astype('float32')
         queries = self.test[:, 1:].astype('float32')
         index = faiss.IndexFlatL2(dim)
@@ -100,7 +92,6 @@ class TxtCls:
         return accuracy_score(self.test[:,0], preds)
 
     def process_dataset(self, data, emb):
-        print('Building document vectors...')
         label_ids = self.label_encoder.transform(data[:, 0])
         label_ids = np.expand_dims(label_ids, axis=1)
         doc_vecs = np.array([doc2vec(txt, self.lang, emb) for txt in tqdm(data[:, 1])])
@@ -117,8 +108,11 @@ if __name__ == '__main__':
     parser.add_argument('--data_dir', help='Path to evaluation data directory', type=str, required=True)
     parser.add_argument('--lang', help='Language', type=str, required=True)
     args = parser.parse_args()
+
+    print('Evaluating language {} embedding {} on dataset {}'.format(args.lang, os.path.basename(args.emb_path), args.data_dir))
+    print('Loading embedding..')
     emb = KeyedVectors.load_word2vec_format(args.emb_path, binary=False, encoding='utf8')
     print('Loaded embedding')
     
     txtcls = TxtCls(lang=args.lang, data_dir=args.data_dir)
-    print('Accuracy: ', txtcls.evaluate(emb))
+    print('Accuracy: ', txtcls.evaluate(emb), '\n\n')
