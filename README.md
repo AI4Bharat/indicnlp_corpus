@@ -67,8 +67,8 @@
 To replicate the results reported in the paper, training and evaluation scripts are provided.
 To run these scripts, the following tools/packages are required: 
 
-- [FastText]()
-- [MUSE]()
+- [FastText](https://github.com/facebookresearch/fastText)
+- [MUSE](https://github.com/facebookresearch/MUSE)
 
 ## Word Embeddings
 
@@ -127,8 +127,6 @@ python  scripts/word_analogy/word_analogy.py \
 
 ## Morphanalyzers
 
-(_Anoop, complete this section_)
-
 IndicNLP Morphanalyzers are unsupervised morphanalyzers trained with [morfessor](https://github.com/aalto-speech/morfessor)
 
 **Download Links**
@@ -138,8 +136,21 @@ _Version 1_
 | [pa](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.pa.model.gz) | [hi](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.hi.model.gz) | [bn](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.bn.model.gz) | [or](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.or.model.gz) | [gu](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.gu.model.gz) | [mr](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.mr.model.gz) | [kn](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.kn.model.gz) | [te](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.te.model.gz) | [ml](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.ml.model.gz) | [ta](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.ta.model.gz) |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
-**Training Scripts**
+**Training Command**
 
+```
+## extract vocabulary from embedings file
+zcat $embedding_vectors_path |  \
+    tail -n +2 | \
+    cut -f 1 -d ' '  > $vocab_file_path
+
+## train morfessor 
+morfessor-train -d ones \
+        -S $model_file_path \
+        --logfile  $log_file_path \
+        --traindata-list $vocab_file_path \
+        --max-epoch 10 
+```
 
 ## IndicNLP News Article Classification Dataset
 
@@ -182,12 +193,16 @@ _Version 1_
 
 ## Citing
 
-(_Divyanshu, complete this section_)
-- If you are using any of the resources , please cite the following
+If you are using any of the resources, please cite the following article: 
 
-TBD
-
-
+```
+@article{kunchukuttan2020indicnlpcorpus,
+    title={IndicNLP Corpus: Monolingual Corpora and Word Embeddings for Indic Languages},
+    author={Anoop Kunchukuttan and Divyanshu Kakwani and Satish Golla and Gokul N.C. and Avik Bhattacharyya and Mitesh M. Khapra and Pratyush Kumar},
+    year={2020},
+    journal={arXiv preprint arXiv:2004.YYYY},
+}
+```
 
 ## License
 
@@ -196,15 +211,14 @@ TBD
 
 ## Contributors
 
-(_Divyanshu, complete this section_)
 * Anoop Kunchukuttan
 * Divyanshu Kakwani
 * Satish Golla
 * Gokul NC
 * Avik Bhattacharyya
 
-
-
 ## Contact
 
-(_Anoop, complete this section_)
+- Anoop Kunchukuttan (anoop.kunchukuttan@gmail.com)
+- Mitesh Khapra (miteshk@cse.iitm.ac.in)
+- Pratyush Kumar (pratyushk@cse.iitm.ac.in)
