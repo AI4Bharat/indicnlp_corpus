@@ -20,6 +20,7 @@
 * [Text Corpora](#text-corpora)
 * [Word Embeddings](#word-embeddings)
 * [Morphanalyser](#morphanalyser)
+* [Citing](#citing)
 * [License](#license)
 * [Contributors](#contributors)
 * [Contact](#contact)
