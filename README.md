@@ -1,4 +1,4 @@
-# IndicNLP Corpora
+# <center>IndicNLP Corpora</center>
 
 
 
