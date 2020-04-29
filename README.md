@@ -173,35 +173,18 @@ We used the IndicNLP text corpora to create classification datasets comprising n
 | Tamil     | entertainment, politics, sport              | 3.9K               |
 | Telugu    | entertainment, business, sports             | 8K                 |
 
-The dataset can be downloaded from [here](). To evaluate your embeddings, first download the dataset and then run the following command:
+
+[**DOWNLOAD**](https://indicnlp.blob.core.windows.net/evaluations/classification/indicnlp-news-articles.tgz)
+
+**Evaluation Command** 
 
 ```bash
 python3 scripts/txtcls.py --emb_path <path> --data_dir <path> --lang <lang code>
 ```
 
+## Publicly available Classification Datasets
 
-
-- data format - described in the readme file
-
-* raw article text - meaning?
-
-- Evaluation scripts (TBD by Divyanshu): -- done
-  - Please include the evaluation scripts in this repo
-  - Ensure that the scripts are running
-
-- Download links:
-  - Divyanshu: prepare the data set and share with anoop
-    - include a readme with a pointer to this section and mention of paper to cite
-  - Anoop: upload to the above dataset to the  below locations
-    - `https://indicnlp.blob.core.windows.net/data/classification/news-article/indicnlp-news-article-v1.0.tgz`
-
-
-
-## Compiled Classification Datasets
-
-(_Divyanshu, complete this section_)
-
-To further enhance our evaluation benchmarks, we compiled the following publicly-available evaluation datasets.
+We also evaluated the IndicNLP embeddings on many publicly available classification datasets. 
 
 * ACTSA Corpus: Sentiment analysis corpus for Telugu sentences. [download link]()
 * BBC News Articles: Sentiment analysis corpus for Hindi documents extracted from BBC news website. [dowload link]()
@@ -210,26 +193,21 @@ To further enhance our evaluation benchmarks, we compiled the following publicly
 * IIT Patna Movie Reviews: Sentiment analysis corpus for movie reviews posted in Hindi. [download link]()
 * Bengali News Articles: Contains Bengali news articles tagged with their news category. [download link]()
 
+We have created standard test, validation and test splits for the above mentioned datasets. You can download them to evaluate your embeddings.
 
+[**DOWNLOAD**](https://indicnlp.blob.core.windows.net/evaluations/classification/classification_public_datasets.tgz)
 
-To evaluate your embeddings on any of the above dataset, first download them and then run the following command:
+**Evaluation Command** 
+
+To evaluate your embeddings on the above mentioned datasets, first download them and then run the following command:
 
 ```bash
 python3 scripts/txtcls.py --emb_path <path> --data_dir <path> --lang <lang code>
 ```
 
+**License**
 
-
-- Evaluation scripts (TBD by Divyanshu):
-  - may need to rerun the evaluation for some languages since embeddings were updated
-  - Anoop: check if Satish already trained with updated data
-- Data Download links:
-  - Divyanshu: Prepare the data set and share with anoop -- done
-  - Anoop: Upload to the above dataset to the below locations
-- `https://indicnlp.blob.core.windows.net/data/classification/public-eval_datasets-v1.0.tgz`
-- License: available under original license
-
-
+These datasets are available under original license for each public dataset. 
 
 ## Citing
 
