@@ -1,33 +1,22 @@
 # <center>AI4Bharat-IndicNLP Corpus</center>
 
-
-
-
-
 - currently many are stored on indicnlp azure blob
 - All data maybe eventually stored on a dedicated ai4bharat bucket
   - Anoop, Mitesh and Gokul to discuss and decide
   - Note that network egress from cloud storage (i.e. people downloading our datasets) costs around $0.1/GB.
-- Logo for IndicNLP Corpus (Avik?)
-
-
-
-
 
 ## Table of contents
 
 * [Introduction](#introduction)
 * [Text Corpora](#text-corpora)
 * [Word Embeddings](#word-embeddings)
-* [Morphanalyser](#morphanalyser)
+* [IndicNLP News Article Classification Dataset](#indicnlp-news-article-classification-dataset)
+* [Publicly available Classification Datasets](#publicly-available-classification-datasets)
+* [Morphanalyzers](#morphanalyzers)
 * [Citing](#citing)
 * [License](#license)
 * [Contributors](#contributors)
 * [Contact](#contact)
-
-
-
-
 
 ## Introduction
 
@@ -126,38 +115,7 @@ python  scripts/word_analogy/word_analogy.py \
     --cuda
 ```
 
-## Morphanalyzers
-
-IndicNLP Morphanalyzers are unsupervised morphanalyzers trained with [morfessor](https://github.com/aalto-speech/morfessor)
-
-**Download Links**
-
-_Version 1_
-
-| [pa](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.pa.model.gz) | [hi](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.hi.model.gz) | [bn](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.bn.model.gz) | [or](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.or.model.gz) | [gu](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.gu.model.gz) | [mr](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.mr.model.gz) | [kn](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.kn.model.gz) | [te](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.te.model.gz) | [ml](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.ml.model.gz) | [ta](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.ta.model.gz) |
-| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-
-**Training Command**
-
-```bash
-## extract vocabulary from embedings file
-zcat $embedding_vectors_path |  \
-    tail -n +2 | \
-    cut -f 1 -d ' '  > $vocab_file_path
-
-## train morfessor 
-morfessor-train -d ones \
-        -S $model_file_path \
-        --logfile  $log_file_path \
-        --traindata-list $vocab_file_path \
-        --max-epoch 10 
-```
-
 ## IndicNLP News Article Classification Dataset
-
-(_Divyanshu, complete this section_)
-
-**Version 1.0**
 
 We used the IndicNLP text corpora to create classification datasets comprising news articles and their categories for 9 languages. The dataset is balanced across classes.  The following table contains the statistics of our dataset:
 
@@ -186,12 +144,12 @@ python3 scripts/txtcls.py --emb_path <path> --data_dir <path> --lang <lang code>
 
 We also evaluated the IndicNLP embeddings on many publicly available classification datasets. 
 
-* ACTSA Corpus: Sentiment analysis corpus for Telugu sentences. [download link]()
-* BBC News Articles: Sentiment analysis corpus for Hindi documents extracted from BBC news website. [dowload link]()
-* IIT Patna Product Reviews: Sentiment analysis corpus for product reviews posted in Hindi. [download link]()
-* INLTK Headlines Corpus: Obtained from [inltk](https://github.com/goru001/inltk) project. The corpus is a collection of headlines tagged with their news category. Available for langauges: gu, ml, mr, ta and te. [download link]()
-* IIT Patna Movie Reviews: Sentiment analysis corpus for movie reviews posted in Hindi. [download link]()
-* Bengali News Articles: Contains Bengali news articles tagged with their news category. [download link]()
+* ACTSA Corpus: Sentiment analysis corpus for Telugu sentences. 
+* BBC News Articles: Sentiment analysis corpus for Hindi documents extracted from BBC news website. 
+* IIT Patna Product Reviews: Sentiment analysis corpus for product reviews posted in Hindi. 
+* INLTK Headlines Corpus: Obtained from [inltk](https://github.com/goru001/inltk) project. The corpus is a collection of headlines tagged with their news category. Available for langauges: gu, ml, mr, ta and te. 
+* IIT Patna Movie Reviews: Sentiment analysis corpus for movie reviews posted in Hindi. 
+* Bengali News Articles: Contains Bengali news articles tagged with their news category.
 
 We have created standard test, validation and test splits for the above mentioned datasets. You can download them to evaluate your embeddings.
 
@@ -208,6 +166,33 @@ python3 scripts/txtcls.py --emb_path <path> --data_dir <path> --lang <lang code>
 **License**
 
 These datasets are available under original license for each public dataset. 
+
+## Morphanalyzers
+
+IndicNLP Morphanalyzers are unsupervised morphanalyzers trained with [morfessor](https://github.com/aalto-speech/morfessor)
+
+**Download Links**
+
+_Version 1_
+
+| [pa](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.pa.model.gz) | [hi](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.hi.model.gz) | [bn](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.bn.model.gz) | [or](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.or.model.gz) | [gu](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.gu.model.gz) | [mr](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.mr.model.gz) | [kn](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.kn.model.gz) | [te](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.te.model.gz) | [ml](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.ml.model.gz) | [ta](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.ta.model.gz) |
+| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+
+**Training Command**
+
+```bash
+## extract vocabulary from embedings file
+zcat $embedding_vectors_path |  \
+    tail -n +2 | \
+    cut -f 1 -d ' '  > $vocab_file_path
+
+## train morfessor 
+morfessor-train -d ones \
+        -S $model_file_path \
+        --logfile  $log_file_path \
+        --traindata-list $vocab_file_path \
+        --max-epoch 10 
+```
 
 ## Citing
 
