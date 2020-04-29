@@ -1,9 +1,5 @@
 # <center>AI4Bharat-IndicNLP Corpus</center>
 
-- currently many are stored on indicnlp azure blob
-- All data maybe eventually stored on a dedicated ai4bharat bucket
-  - Anoop, Mitesh and Gokul to discuss and decide
-  - Note that network egress from cloud storage (i.e. people downloading our datasets) costs around $0.1/GB.
 
 ## Table of contents
 
@@ -25,40 +21,33 @@
 - Brief description of the project
 - Link to the paper on arxiv
 
-
-
-
 ## Text Corpora
 
-(_Divyanshu, complete this section_)
+Following are the statistics of the text corpora used to build the embeddings and other resources. The text corpus will be available later, meanwhile you can download the embedding, classification sets and other resources.
 
-- we should remove or cite the datasets that we obtained from other sources, like hindi's
-- @Anoop: Note that the v1 datasets for kn, or, pa, ta, te are on google cloud at `gs://nlp-corpora--ai4bharat/indicnlp-datasets/monoling-v1/.` If we are not going with google cloud, we should copy it over to your Microsoft blob storage.
-
-
-| Language | Sentences | Tokens  | Types | Download Link                                                |
-| -------- | --------- | ------- | ----- | ------------------------------------------------------------ |
-| bn       | 7.2M      | 100.1M  | 1.5M  | [v1](https://indicnlp.blob.core.windows.net/data/monolingual/sentence/bn.txt.gz) |
-| gu       | 7.8M      | 129.7M  | 2.4M  | [v1](https://indicnlp.blob.core.windows.net/data/monolingual/sentence/gu.txt.gz) |
-| hi       | 62.9M     | 1199.8M | 5.3M  | [v1](https://indicnlp.blob.core.windows.net/data/monolingual/sentence/hi.txt.gz) |
-| kn       | 14.7M     | 174.9M  | 3.0M  | [v1](https://indicnlp.blob.core.windows.net/data/monolingual/sentence/kn.txt.gz) |
-| ml       | 11.6M     | 167.4M  | 8.8M  | [v1](https://indicnlp.blob.core.windows.net/data/monolingual/sentence/ml.txt.gz) |
-| mr       | 9.9M      | 142.4M  | 2.6M  | [v1](https://indicnlp.blob.core.windows.net/data/monolingual/sentence/mr.txt.gz) |
-| or       | 3.5M      | 51.5M   | 0.7M  | [v1](https://indicnlp.blob.core.windows.net/data/monolingual/sentence/or.txt.gz) |
-| pa       | 6.5M      | 179.4M  | 0.5M  | [v1](https://indicnlp.blob.core.windows.net/data/monolingual/sentence/pa.txt.gz) |
-| ta       | 20.9M     | 362.8M  | 9.4M  | [v1](https://indicnlp.blob.core.windows.net/data/monolingual/sentence/ta.txt.gz) |
-| te       | 15.1M     | 190.2M  | 4.1M  | [v1](https://indicnlp.blob.core.windows.net/data/monolingual/sentence/te.txt.gz) |
-
-**Note**: We are working on releasing much larger dataset (version 2) soon.
-
+| Language | Sentences | Tokens  | Types |
+| -------- | --------- | ------- | ----- | 
+| bn       | 7.2M      | 100.1M  | 1.5M  | 
+| gu       | 7.8M      | 129.7M  | 2.4M  | 
+| hi       | 62.9M     | 1199.8M | 5.3M  | 
+| kn       | 14.7M     | 174.9M  | 3.0M  | 
+| ml       | 11.6M     | 167.4M  | 8.8M  | 
+| mr       | 9.9M      | 142.4M  | 2.6M  | 
+| or       | 3.5M      | 51.5M   | 0.7M  | 
+| pa       | 6.5M      | 179.4M  | 0.5M  | 
+| ta       | 20.9M     | 362.8M  | 9.4M  |
+| te       | 15.1M     | 190.2M  | 4.1M  | 
 
 ## Pre-requisites 
 
 To replicate the results reported in the paper, training and evaluation scripts are provided.
+
 To run these scripts, the following tools/packages are required: 
 
 - [FastText](https://github.com/facebookresearch/fastText)
 - [MUSE](https://github.com/facebookresearch/MUSE)
+
+For Python packages to install, see `requirements.txt`
 
 ## Word Embeddings
 
@@ -70,8 +59,8 @@ _Version 1_
 
 | language | pa | hi | bn | or | gu | mr | kn | te | ml | ta |
 | -------- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| vectors | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.pa.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.hi.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.bn.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.or.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.gu.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.mr.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.kn.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.te.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ml.vec.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ta.vec.gz) |
-| model | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.pa.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.hi.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.bn.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.or.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.gu.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.mr.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.kn.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.te.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ml.bin.gz) | [link](https://indicnlp.blob.core.windows.net/embedding/indicnlp.v1.ta.bin.gz) |
+| vectors | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.pa.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.hi.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.bn.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.or.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.gu.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.mr.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.kn.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.te.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.ml.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.ta.vec.gz) |
+| model | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.pa.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.hi.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.bn.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.or.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.gu.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.mr.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.kn.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.te.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.ml.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.ta.bin.gz) |
 
 
 **Training word embeddings**
@@ -85,7 +74,7 @@ $FASTTEXT_HOME/build/fasttext skipgram \
 
 **Evaluation on word similarity task**
 
-Evaluate on the IIIT-H Word Similarity Database: `https://indicnlp.blob.core.windows.net/evaluations/word_similarity/iiith_wordsim.tgz`
+Evaluate on the IIIT-H Word Similarity Database: `https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/evaluations/word_similarity/iiith_wordsim.tgz`
 
 The above mentioned link is a cleaned version of the same database found [HERE](https://github.com/syedsarfarazakhtar/Word-Similarity-Datasets-for-Indian-Languages).
 
@@ -132,7 +121,7 @@ We used the IndicNLP text corpora to create classification datasets comprising n
 | Telugu    | entertainment, business, sports             | 8K                 |
 
 
-[**DOWNLOAD**](https://indicnlp.blob.core.windows.net/evaluations/classification/indicnlp-news-articles.tgz)
+[**DOWNLOAD**](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/evaluations/classification/indicnlp-news-articles.tgz)
 
 **Evaluation Command** 
 
@@ -153,7 +142,7 @@ We also evaluated the IndicNLP embeddings on many publicly available classificat
 
 We have created standard test, validation and test splits for the above mentioned datasets. You can download them to evaluate your embeddings.
 
-[**DOWNLOAD**](https://indicnlp.blob.core.windows.net/evaluations/classification/classification_public_datasets.tgz)
+[**DOWNLOAD**](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/evaluations/classification/classification_public_datasets.tgz)
 
 **Evaluation Command** 
 
@@ -175,7 +164,7 @@ IndicNLP Morphanalyzers are unsupervised morphanalyzers trained with [morfessor]
 
 _Version 1_
 
-| [pa](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.pa.model.gz) | [hi](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.hi.model.gz) | [bn](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.bn.model.gz) | [or](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.or.model.gz) | [gu](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.gu.model.gz) | [mr](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.mr.model.gz) | [kn](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.kn.model.gz) | [te](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.te.model.gz) | [ml](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.ml.model.gz) | [ta](https://indicnlp.blob.core.windows.net/morph/morfessor/indicnlp.v1.ta.model.gz) |
+| [pa](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/morph/morfessor/indicnlp.v1.pa.model.gz) | [hi](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/morph/morfessor/indicnlp.v1.hi.model.gz) | [bn](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/morph/morfessor/indicnlp.v1.bn.model.gz) | [or](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/morph/morfessor/indicnlp.v1.or.model.gz) | [gu](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/morph/morfessor/indicnlp.v1.gu.model.gz) | [mr](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/morph/morfessor/indicnlp.v1.mr.model.gz) | [kn](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/morph/morfessor/indicnlp.v1.kn.model.gz) | [te](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/morph/morfessor/indicnlp.v1.te.model.gz) | [ml](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/morph/morfessor/indicnlp.v1.ml.model.gz) | [ta](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/morph/morfessor/indicnlp.v1.ta.model.gz) |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
 **Training Command**
@@ -193,6 +182,10 @@ morfessor-train -d ones \
         --traindata-list $vocab_file_path \
         --max-epoch 10 
 ```
+
+## Other Resources
+
+You can use IndicNLP embeddings for other Indian language tasks. A comprehensive list of Indian language NLP resources can be found in the [IndicNLP Catalog](https://github.com/indicnlpweb/indicnlp_catalog). For processing the Indian language text, you can use the [Indic NLP Library](https://github.com/anoopkunchukuttan/indic_nlp_library)
 
 ## Citing
 
