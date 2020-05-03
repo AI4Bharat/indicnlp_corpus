@@ -15,7 +15,7 @@ The AI4Bharat-IndicNLP corpus is an ongoing effort to create a large-scale, gene
 * [Contact](#contact)
 
 ## Text Corpora
-gsutil cp -p gs://nlp-corpora--ai4bharat/indicnlp-datasets/monoling/en/wc_dedup.tar.xz gs://"nlp-corpora--ai4bharat/indicnlp-datasets/monoling/en/Copy of wc_dedup.tar.xz"
+
 Following are the statistics of the text corpora used to build the embeddings and other resources. The text corpus will be available later, meanwhile you can download the embeddings, classification sets and other resources.
 
 | Language | Sentences | Tokens  | Types | Vocab Frequency |
