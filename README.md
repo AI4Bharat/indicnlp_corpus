@@ -23,7 +23,7 @@
 
 ## Text Corpora
 
-Following are the statistics of the text corpora used to build the embeddings and other resources. The text corpus will be available later, meanwhile you can download the embedding, classification sets and other resources.
+Following are the statistics of the text corpora used to build the embeddings and other resources. The text corpus will be available later, meanwhile you can download the embeddings, classification sets and other resources.
 
 | Language | Sentences | Tokens  | Types |
 | -------- | --------- | ------- | ----- | 
