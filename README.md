@@ -1,9 +1,9 @@
 # <center>AI4Bharat-IndicNLP Corpus</center>
 
+The AI4Bharat-IndicNLP corpus is an ongoing effort to create a large-scale, general-domain corpus for Indian languages. Currently, it contains 2.7 billion words for 10 Indian languages from two language families. We  share pre-trained word embeddings trained on these corpora. We create news article category classification datasets for 9 languages to evaluate the embeddings. We evaluate the IndicNLP embeddings on multiple evaluation tasks. You can read details regarding the corpus and other resources [HERE](ai4bharat-indicnlp-corpus-2020.pdf).
 
 ## Table of contents
 
-* [Introduction](#introduction)
 * [Text Corpora](#text-corpora)
 * [Word Embeddings](#word-embeddings)
 * [IndicNLP News Article Classification Dataset](#indicnlp-news-article-classification-dataset)
@@ -13,13 +13,6 @@
 * [License](#license)
 * [Contributors](#contributors)
 * [Contact](#contact)
-
-## Introduction
-
-(_Anoop, complete this section_)
-
-- Brief description of the project
-- Link to the paper on arxiv
 
 ## Text Corpora
 
@@ -51,9 +44,7 @@ For Python packages to install, see `requirements.txt`
 
 ## Word Embeddings
 
-(_Anoop, complete this section_)
-
-**Download Links**
+**DOWNLOAD**
 
 _Version 1_ 
 
@@ -74,10 +65,9 @@ $FASTTEXT_HOME/build/fasttext skipgram \
 
 **Evaluation on word similarity task**
 
-Evaluate on the IIIT-H Word Similarity Database: `https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/evaluations/word_similarity/iiith_wordsim.tgz`
+Evaluate on the IIIT-H Word Similarity Database: [**DOWNLOAD**](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/evaluations/word_similarity/iiith_wordsim.tgz)
 
 The above mentioned link is a cleaned version of the same database found [HERE](https://github.com/syedsarfarazakhtar/Word-Similarity-Datasets-for-Indian-Languages).
-
 
 _Evaluation Command_
 
@@ -158,9 +148,9 @@ These datasets are available under original license for each public dataset.
 
 ## Morphanalyzers
 
-IndicNLP Morphanalyzers are unsupervised morphanalyzers trained with [morfessor](https://github.com/aalto-speech/morfessor)
+IndicNLP Morphanalyzers are unsupervised morphanalyzers trained with [morfessor](https://github.com/aalto-speech/morfessor).
 
-**Download Links**
+**DOWNLOAD**
 
 _Version 1_
 
@@ -185,7 +175,7 @@ morfessor-train -d ones \
 
 ## Other Resources
 
-You can use IndicNLP embeddings for other Indian language tasks. A comprehensive list of Indian language NLP resources can be found in the [IndicNLP Catalog](https://github.com/indicnlpweb/indicnlp_catalog). For processing the Indian language text, you can use the [Indic NLP Library](https://github.com/anoopkunchukuttan/indic_nlp_library)
+You can use IndicNLP embeddings for other Indian language tasks. A comprehensive list of Indian language NLP resources can be found in the [IndicNLP Catalog](https://github.com/indicnlpweb/indicnlp_catalog). For processing the Indian language text, you can use the [Indic NLP Library](https://github.com/anoopkunchukuttan/indic_nlp_library).
 
 ## Citing
 
@@ -212,6 +202,8 @@ If you are using any of the resources, please cite the following article:
 * Satish Golla
 * Gokul NC
 * Avik Bhattacharyya
+* Mitesh Khapra
+* Pratyush Kumar
 
 ## Contact
 
