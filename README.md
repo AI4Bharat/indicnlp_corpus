@@ -18,18 +18,18 @@ The AI4Bharat-IndicNLP corpus is an ongoing effort to create a large-scale, gene
 
 Following are the statistics of the text corpora used to build the embeddings and other resources. The text corpus will be available later, meanwhile you can download the embeddings, classification sets and other resources.
 
-| Language | Sentences | Tokens  | Types |
-| -------- | --------- | ------- | ----- | 
-| bn       | 7.2M      | 100.1M  | 1.5M  | 
-| gu       | 7.8M      | 129.7M  | 2.4M  | 
-| hi       | 62.9M     | 1199.8M | 5.3M  | 
-| kn       | 14.7M     | 174.9M  | 3.0M  | 
-| ml       | 11.6M     | 167.4M  | 8.8M  | 
-| mr       | 9.9M      | 142.4M  | 2.6M  | 
-| or       | 3.5M      | 51.5M   | 0.7M  | 
-| pa       | 6.5M      | 179.4M  | 0.5M  | 
-| ta       | 20.9M     | 362.8M  | 9.4M  |
-| te       | 15.1M     | 190.2M  | 4.1M  | 
+| Language | Sentences | Tokens  | Types | Vocab Frequency |
+| -------- | --------- | ------- | ----- | --------------- |
+| bn       | 7.2M      | 100.1M  | 1.5M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/bn.vocabfreq.tsv.gz) |
+| gu       | 7.8M      | 129.7M  | 2.4M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/gu.vocabfreq.tsv.gz) |
+| hi       | 62.9M     | 1199.8M | 5.3M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/hi.vocabfreq.tsv.gz) |
+| kn       | 14.7M     | 174.9M  | 3.0M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/kn.vocabfreq.tsv.gz) |
+| ml       | 11.6M     | 167.4M  | 8.8M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/ml.vocabfreq.tsv.gz) |
+| mr       | 9.9M      | 142.4M  | 2.6M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/mr.vocabfreq.tsv.gz) |
+| or       | 3.5M      | 51.5M   | 0.7M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/or.vocabfreq.tsv.gz) |
+| pa       | 6.5M      | 179.4M  | 0.5M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/pa.vocabfreq.tsv.gz) |
+| ta       | 20.9M     | 362.8M  | 9.4M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/ta.vocabfreq.tsv.gz) |
+| te       | 15.1M     | 190.2M  | 4.1M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/te.vocabfreq.tsv.gz) |
 
 ## Pre-requisites 
 
@@ -52,7 +52,6 @@ _Version 1_
 | -------- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 | vectors | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.pa.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.hi.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.bn.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.or.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.gu.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.mr.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.kn.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.te.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.ml.vec.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.ta.vec.gz) |
 | model | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.pa.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.hi.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.bn.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.or.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.gu.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.mr.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.kn.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.te.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.ml.bin.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/embedding/indicnlp.v1.ta.bin.gz) |
-
 
 **Training word embeddings**
 
