@@ -31,6 +31,10 @@ Following are the statistics of the text corpora used to build the embeddings an
 | ta       | 20.9M     | 362.8M  | 9.4M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/ta.vocabfreq.tsv.gz) |
 | te       | 15.1M     | 190.2M  | 4.1M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/te.vocabfreq.tsv.gz) |
 
+**Note** 
+
+- The vocabulary frequency files contain the frequency of all unique tokens in the corpus. Each line contains one word along with frequency delimited by tab.
+
 ## Pre-requisites 
 
 To replicate the results reported in the paper, training and evaluation scripts are provided.
