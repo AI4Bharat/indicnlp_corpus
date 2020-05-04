@@ -190,9 +190,14 @@ If you are using any of the resources, please cite the following article:
     title={IndicNLP Corpus: Monolingual Corpora and Word Embeddings for Indic Languages},
     author={Anoop Kunchukuttan and Divyanshu Kakwani and Satish Golla and Gokul N.C. and Avik Bhattacharyya and Mitesh M. Khapra and Pratyush Kumar},
     year={2020},
-    journal={arXiv preprint arXiv:2004.YYYY},
+    journal={arXiv preprint arXiv:2005.00085},
 }
 ```
+
+We would like to hear from you if: 
+
+- You are using our resources. Please let us know how you are putting these resources to use. 
+- You have any feedback on these resources. 
 
 ## License
 
