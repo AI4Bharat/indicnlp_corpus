@@ -9,6 +9,7 @@ The AI4Bharat-IndicNLP corpus is an ongoing effort to create a large-scale, gene
 * [IndicNLP News Article Classification Dataset](#indicnlp-news-article-classification-dataset)
 * [Publicly available Classification Datasets](#publicly-available-classification-datasets)
 * [Morphanalyzers](#morphanalyzers)
+* [Other Indian language NLP Resources](#other-indian-language-nlp-resources)
 * [Citing](#citing)
 * [License](#license)
 * [Contributors](#contributors)
@@ -176,9 +177,9 @@ morfessor-train -d ones \
         --max-epoch 10 
 ```
 
-## Other Resources
+## Other Indian language NLP Resources
 
-You can use IndicNLP embeddings for other Indian language tasks. A comprehensive list of Indian language NLP resources can be found in the [IndicNLP Catalog](https://github.com/indicnlpweb/indicnlp_catalog). For processing the Indian language text, you can use the [Indic NLP Library](https://github.com/anoopkunchukuttan/indic_nlp_library).
+You can use IndicNLP embeddings for other Indian language tasks too. A comprehensive list of Indian language NLP resources can be found in the [IndicNLP Catalog](https://github.com/indicnlpweb/indicnlp_catalog). For processing the Indian language text, you can use the [Indic NLP Library](https://github.com/anoopkunchukuttan/indic_nlp_library).
 
 ## Citing
 
