@@ -1,6 +1,8 @@
-# <center>AI4Bharat-IndicNLP Corpus</center>
+# <center>AI4Bharat-IndicNLP Dataset</center>
 
-The AI4Bharat-IndicNLP corpus is an ongoing effort to create a large-scale, general-domain corpus for Indian languages. Currently, it contains 2.7 billion words for 10 Indian languages from two language families. We  share pre-trained word embeddings trained on these corpora. We create news article category classification datasets for 9 languages to evaluate the embeddings. We evaluate the IndicNLP embeddings on multiple evaluation tasks. You can read details regarding the corpus and other resources [HERE](ai4bharat-indicnlp-corpus-2020.pdf).
+The AI4Bharat-IndicNLP dataset is an ongoing effort to create a collection of large-scale, general-domain corpora for Indian languages. Currently, it contains 2.7 billion words for 10 Indian languages from two language families. We  share pre-trained word embeddings trained on these corpora. We create news article category classification datasets for 9 languages to evaluate the embeddings. We evaluate the IndicNLP embeddings on multiple evaluation tasks. You can read details regarding the corpus and other resources [HERE](ai4bharat-indicnlp-corpus-2020.pdf).
+
+:new: AI4Bharat-IndicNLP corpus has been selected as an extended abstract at [REPL4NLP 2020](https://sites.google.com/view/repl4nlp2020/home) (collocated with ACL 2020).
 
 ## Table of contents
 
