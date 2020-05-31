@@ -91,6 +91,12 @@ Evaluate on the [Facebook word analogy dataset](https://dl.fbaipublicfiles.com/f
 
 _Evaluation Command_
 
+First, add MUSE root directory to Python Path
+
+```bash
+export PYTHONPATH=$PYTHONPATH:$MUSE_PATH
+```
+
 ```bash
 python  scripts/word_analogy/word_analogy.py \
     --analogy_fname <analogy_fname> \
