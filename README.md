@@ -23,16 +23,16 @@ Following are the statistics of the text corpora used to build the embeddings an
 
 | Language | Sentences | Tokens  | Types | Vocab Frequency |
 | -------- | --------- | ------- | ----- | --------------- |
-| bn       | 7.2M      | 100.1M  | 1.5M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/bn.vocabfreq.tsv.gz) |
-| gu       | 7.8M      | 129.7M  | 2.4M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/gu.vocabfreq.tsv.gz) |
-| hi       | 62.9M     | 1199.8M | 5.3M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/hi.vocabfreq.tsv.gz) |
-| kn       | 14.7M     | 174.9M  | 3.0M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/kn.vocabfreq.tsv.gz) |
-| ml       | 11.6M     | 167.4M  | 8.8M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/ml.vocabfreq.tsv.gz) |
-| mr       | 9.9M      | 142.4M  | 2.6M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/mr.vocabfreq.tsv.gz) |
-| or       | 3.5M      | 51.5M   | 0.7M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/or.vocabfreq.tsv.gz) |
 | pa       | 6.5M      | 179.4M  | 0.5M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/pa.vocabfreq.tsv.gz) |
-| ta       | 20.9M     | 362.8M  | 9.4M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/ta.vocabfreq.tsv.gz) |
+| hi       | 62.9M     | 1199.8M | 5.3M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/hi.vocabfreq.tsv.gz) |
+| bn       | 7.2M      | 100.1M  | 1.5M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/bn.vocabfreq.tsv.gz) |
+| or       | 3.5M      | 51.5M   | 0.7M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/or.vocabfreq.tsv.gz) |
+| gu       | 7.8M      | 129.7M  | 2.4M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/gu.vocabfreq.tsv.gz) |
+| mr       | 9.9M      | 142.4M  | 2.6M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/mr.vocabfreq.tsv.gz) |
+| kn       | 14.7M     | 174.9M  | 3.0M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/kn.vocabfreq.tsv.gz) |
 | te       | 15.1M     | 190.2M  | 4.1M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/te.vocabfreq.tsv.gz) |
+| ml       | 11.6M     | 167.4M  | 8.8M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/ml.vocabfreq.tsv.gz) |
+| ta       | 20.9M     | 362.8M  | 9.4M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/ta.vocabfreq.tsv.gz) |
 
 **Note** 
 
