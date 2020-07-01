@@ -19,7 +19,7 @@ The AI4Bharat-IndicNLP dataset is an ongoing effort to create a collection of la
 
 ## Text Corpora
 
-Following are the statistics of the text corpora used to build the embeddings and other resources. The text corpus will be available later, meanwhile you can download the embeddings, classification sets and other resources.
+The text corpus contains around 2.7 billion tokens across all 10 languages. 
 
 | Language | Sentences | Tokens  | Types | Vocab Frequency | Corpus |
 | -------- | --------- | ------- | ----- | --------------- | ------ |
