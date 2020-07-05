@@ -222,7 +222,7 @@ We would like to hear from you if:
 * Mitesh Khapra
 * Pratyush Kumar
 
-This work is the outcome of a volunteer effort as part of AI4Bharat initiative.
+This work is the outcome of a volunteer effort as part of [AI4Bharat initiative](https://ai4bharat.org).
 
 ## Contact
 
