@@ -37,6 +37,7 @@ The text corpus contains around 2.7 billion tokens across all 10 languages.
 **Note** 
 
 - The vocabulary frequency files contain the frequency of all unique tokens in the corpus. Each line contains one word along with frequency delimited by tab.
+- For convenience, the corpus ia already tokenized using the IndicNLP tokenizer. You can use the IndicNLP detokenizer in case you want a detokenized version.
 
 ## Pre-requisites 
 
