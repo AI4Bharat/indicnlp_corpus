@@ -1,8 +1,10 @@
 # <center>AI4Bharat-IndicNLP Dataset</center>
 
-The AI4Bharat-IndicNLP dataset is an ongoing effort to create a collection of large-scale, general-domain corpora for Indian languages. Currently, it contains 2.7 billion words for 10 Indian languages from two language families. We  share pre-trained word embeddings trained on these corpora. We create news article category classification datasets for 9 languages to evaluate the embeddings. We evaluate the IndicNLP embeddings on multiple evaluation tasks. You can read details regarding the corpus and other resources [HERE](ai4bharat-indicnlp-corpus-2020.pdf).
+The AI4Bharat-IndicNLP dataset is an ongoing effort to create a collection of large-scale, general-domain corpora for Indian languages. Currently, it contains 2.7 billion words for 10 Indian languages from two language families. We  share pre-trained word embeddings trained on these corpora. We create news article category classification datasets for 9 languages to evaluate the embeddings. We evaluate the IndicNLP embeddings on multiple evaluation tasks. 
 
-:new: We will showcase the AI4Bharat-IndicNLP dataset at [REPL4NLP 2020](https://sites.google.com/view/repl4nlp2020/home) (collocated with ACL 2020) _(non-archival submission as extended abstract)_.
+You can read details regarding the corpus and other resources [HERE](ai4bharat-indicnlp-corpus-2020.pdf). We showcased the AI4Bharat-IndicNLP dataset at [REPL4NLP 2020](https://sites.google.com/view/repl4nlp2020/home) (collocated with ACL 2020) _(non-archival submission as extended abstract)_. You can see the talk here: [VIDEO](https://slideslive.com/38931238/ai4bharatindicnlp-dataset-monolingual-corpora-and-word-embeddings-for-indic-languages).
+
+You can use the IndicNLP corpus and embeddings for multiple Indian language tasks. A comprehensive list of Indian language NLP resources can be found in the [IndicNLP Catalog](https://github.com/indicnlpweb/indicnlp_catalog). For processing the Indian language text, you can use the [Indic NLP Library](https://github.com/anoopkunchukuttan/indic_nlp_library).
 
 ## Table of contents
 
@@ -11,7 +13,6 @@ The AI4Bharat-IndicNLP dataset is an ongoing effort to create a collection of la
 * [IndicNLP News Article Classification Dataset](#indicnlp-news-article-classification-dataset)
 * [Publicly available Classification Datasets](#publicly-available-classification-datasets)
 * [Morphanalyzers](#morphanalyzers)
-* [Other Indian language NLP Resources](#other-indian-language-nlp-resources)
 * [Citing](#citing)
 * [License](#license)
 * [Contributors](#contributors)
@@ -185,10 +186,6 @@ morfessor-train -d ones \
         --traindata-list $vocab_file_path \
         --max-epoch 10 
 ```
-
-## Other Indian language NLP Resources
-
-You can use IndicNLP embeddings for other Indian language tasks too. A comprehensive list of Indian language NLP resources can be found in the [IndicNLP Catalog](https://github.com/indicnlpweb/indicnlp_catalog). For processing the Indian language text, you can use the [Indic NLP Library](https://github.com/anoopkunchukuttan/indic_nlp_library).
 
 ## Citing
 
