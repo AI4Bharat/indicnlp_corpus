@@ -140,7 +140,7 @@ We also evaluated the IndicNLP embeddings on many publicly available classificat
 * ACTSA Corpus: Sentiment analysis corpus for Telugu sentences. 
 * BBC News Articles: Sentiment analysis corpus for Hindi documents extracted from BBC news website. 
 * IIT Patna Product Reviews: Sentiment analysis corpus for product reviews posted in Hindi. 
-* INLTK Headlines Corpus: Obtained from [inltk](https://github.com/goru001/inltk) project. The corpus is a collection of headlines tagged with their news category. Available for langauges: gu, ml, mr, ta and te. 
+* INLTK Headlines Corpus: Obtained from [inltk](https://github.com/goru001/inltk) project. The corpus is a collection of headlines tagged with their news category. Available for langauges: gu, ml, mr and ta. 
 * IIT Patna Movie Reviews: Sentiment analysis corpus for movie reviews posted in Hindi. 
 * Bengali News Articles: Contains Bengali news articles tagged with their news category.
 
