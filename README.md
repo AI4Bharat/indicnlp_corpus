@@ -20,20 +20,22 @@ You can use the IndicNLP corpus and embeddings for multiple Indian language task
 
 ## Text Corpora
 
-The text corpus contains around 2.7 billion tokens across all 10 languages. 
+The text corpus for 12 languages. 
 
-| Language | Sentences | Tokens  | Types | Vocab Frequency | Corpus |
-| -------- | --------- | ------- | ----- | --------------- | ------ |
-| pa       | 6.5M      | 179.4M  | 0.5M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/pa.vocabfreq.tsv.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/pa.txt.gz) |
-| hi       | 62.9M     | 1199.8M | 5.3M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/hi.vocabfreq.tsv.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/hi.txt.gz) |
-| bn       | 7.2M      | 100.1M  | 1.5M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/bn.vocabfreq.tsv.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/bn.txt.gz) |
-| or       | 3.5M      | 51.5M   | 0.7M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/or.vocabfreq.tsv.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/or.txt.gz) |
-| gu       | 7.8M      | 129.7M  | 2.4M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/gu.vocabfreq.tsv.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/gu.txt.gz) |
-| mr       | 9.9M      | 142.4M  | 2.6M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/mr.vocabfreq.tsv.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/mr.txt.gz) |
-| kn       | 14.7M     | 174.9M  | 3.0M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/kn.vocabfreq.tsv.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/kn.txt.gz) |
-| te       | 15.1M     | 190.2M  | 4.1M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/te.vocabfreq.tsv.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/te.txt.gz) |
-| ml       | 11.6M     | 167.4M  | 8.8M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/ml.vocabfreq.tsv.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/ml.txt.gz) |
-| ta       | 20.9M     | 362.8M  | 9.4M  | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/corpus_stats/ta.vocabfreq.tsv.gz) | [link](https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/data/monolingual/indicnlp_v1/sentence/ta.txt.gz) |
+| Language | \# News Articles* | Sentences     | Tokens        | Link    |
+| -------- | ----------------- | ------------- | ------------- | --------|
+| as       | 0.60M             | 1.39M   |  32.6M  |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/as.txt)    |
+| bn       | 3.83M             | 39.9M | 836M  |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/bn.txt)      |
+| en       | 3.49M             | 54.3M | 1.22B |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/en.txt)      |
+| gu       | 2.63M             | 41.1M | 719M  |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/gu.txt)      |
+| hi       | 4.95M             | 63.1M |  1.86B |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/hi.txt)      |
+| kn       | 3.76M             | 53.3M | 713M  |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/kn.txt)      |
+| ml       | 4.75M             | 50.2M |  721M  |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/ml.txt)      |
+| mr       | 2.31M             | 34.0M | 551M  |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/mr.txt)      |
+| or       | 0.69M             | 6.94M   | 107M   |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/or.txt)     |
+| pa       | 2.64M             | 29.2M |  773M  |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/pa.txt)      |
+| ta       | 4.41M             |  31.5M   |  582M  |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/ta.txt)    |
+| te       | 3.98M             | 47.9M   |  674M  |      [link](https://objectstore.e2enetworks.net/ai4b-public-nlu-nlg/v1-indiccorp/te.txt)     |
 
 **Note** 
 
